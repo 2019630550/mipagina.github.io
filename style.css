@@ -1,78 +1,124 @@
-body {
-    text-align: center;
-    background-color: #f8f9fa;
-    font-family: 'Georgia', serif;
-    color: #343a40;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/* Encabezado */
 header {
-    background-color: #006400;
+    background-color: #2c3e50;
     color: white;
-    padding: 20px 0;
+    padding: 2rem 1rem;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
 }
 
-main {
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 400px;
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    color: #f1c40f;
+}
+
+/* Secciones */
+section {
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+    max-width: 800px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-label {
-    display: block;
-    text-align: left;
-    font-size: 16px;
-    margin-bottom: 10px;
+h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    font-size: 16px;
+ul {
+    list-style: none;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-    outline: none;
-    border-color: #006400;
+ul li::before {
+    content: "✓ ";
+    color: #27ae60;
+    margin-right: 0.5rem;
+}
+
+/* Llamado a la acción */
+.cta {
+    background-color: #f1c40f;
+    text-align: center;
+    border: 2px solid #f39c12;
+}
+
+.cta span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #c0392b;
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 button {
-    background-color: #006400;
+    padding: 0.8rem;
+    background-color: #27ae60;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #004d00;
+    background-color: #1e8449;
 }
 
+/* Footer */
 footer {
-    background-color: #006400;
-    color: white;
-    padding: 10px 0;
     text-align: center;
-    font-size: 14px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 2rem;
 }
 
-.logo {
-    margin-bottom: 30px;
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
 }
